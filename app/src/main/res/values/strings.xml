@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Xing</string>
+    <string name="not_internet_available">Not internet available</string>
+    <string name="failure_network_connection">No Internet connection available..</string>
+    <string name="failure_fatal_error">Sorry, something went wrong. Please try again later or contact support.</string>
+    <string name="failure_recoverable_error">Sorry, please try again.</string>
+    <string name="failure_no_connection">Please, check your connection and try again.</string>
+    <string name="info_no_data_available">Sorry, there is no data available.</string>
+    <string name="search_repo">Search repo…..</string>
+    <string name="title_modal">Go to repository?</string>
+    <string name="button_go_modal">Go</string>
+    <string name="button_cancel_modal">Cancel</string>
+    <string name="search_default">xing</string>
+    <string name="image_repo">Image repo</string>
+</resources>

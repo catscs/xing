@@ -1,0 +1,97 @@
+ext {
+    targetVersion = 30
+    compileVersion = 30
+    minVersion = 23
+    versionCode = 1
+    versionName = "1.0"
+    buildToolsVersion = "30.0.3"
+
+    kotlinVersion = "1.5.10"
+    gradleVersion = "4.2.1"
+    retrofitVersion = "2.9.0"
+    okhttpVersion = '5.0.0-alpha.2'
+    coreKtxVersion = '1.5.0'
+    navigationVersion = '2.3.5'
+    androidxVersion = '1.2.1'
+    appCompatVersion = '1.3.0'
+    materialVersion = '1.3.0'
+    constraintlayoutVersion = "2.0.4"
+    picassoVersion = "2.71828"
+    archLifecycleVersion = '2.3.1'
+    playServicesMapVersion = '17.0.1'
+    roomVersion = '2.3.0'
+    moshiVersion = '1.12.0'
+    coordinatorlayoutVersion = '1.1.0'
+    lifecycleExtensionsVersion = '2.2.0'
+
+    Libraries = [
+            gradle             : "com.android.tools.build:gradle:$gradleVersion",
+            kotlinGradlePlugin : "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion",
+            kotlinStLib        : "org.jetbrains.kotlin:kotlin-stdlib:$kotlinVersion",
+            playServicesMap    : "com.google.android.gms:play-services-maps:$playServicesMapVersion",
+            appcompat          : "androidx.appcompat:appcompat:$appCompatVersion",
+            material           : "com.google.android.material:material:$materialVersion",
+            coordinatorlayout  : "androidx.coordinatorlayout:coordinatorlayout:$coordinatorlayoutVersion",
+            recyclerview       : "androidx.recyclerview:recyclerview:$androidxVersion",
+            constraintlayout   : "androidx.constraintlayout:constraintlayout:$constraintlayoutVersion",
+            retrofit           : "com.squareup.retrofit2:retrofit:$retrofitVersion",
+            retrofitMoshi      : "com.squareup.retrofit2:converter-moshi:$retrofitVersion",
+            moshi              : "com.squareup.moshi:moshi:$moshiVersion",
+            moshiKotlin        : "com.squareup.moshi:moshi-kotlin-codegen:$moshiVersion",
+            okhttp             : "com.squareup.okhttp3:logging-interceptor:$okhttpVersion",
+            coreKtx            : "androidx.core:core-ktx:$coreKtxVersion",
+            lifecycleExtensions: "androidx.lifecycle:lifecycle-extensions:$lifecycleExtensionsVersion",
+            viewmodelKtx       : "androidx.lifecycle:lifecycle-viewmodel-ktx:$archLifecycleVersion",
+            livedataKtx        : "androidx.lifecycle:lifecycle-livedata-ktx:$archLifecycleVersion",
+            runtimeKtx         : "androidx.lifecycle:lifecycle-runtime-ktx:$archLifecycleVersion",
+            navigationFragment : "androidx.navigation:navigation-fragment-ktx:$navigationVersion",
+            picasso            : "com.squareup.picasso:picasso:$picassoVersion",
+            roomRuntime        : "androidx.room:room-runtime:$roomVersion",
+            roomCompiler       : "androidx.room:room-compiler:$roomVersion",
+            roomKtx            : "androidx.room:room-ktx:$roomVersion",
+    ]
+
+    dagger = "2.29.1"
+    daggerHiltAndroid = '2.36'
+    daggerHiltVersion = '1.0.0-alpha03'
+
+    DaggerHiltLibraries = [
+            dagger             : "com.google.dagger:dagger:$dagger",
+            hiltAndroid        : "com.google.dagger:hilt-android:$daggerHiltAndroid",
+            hiltCompiler       : "androidx.hilt:hilt-compiler:$daggerHiltVersion",
+            daggerCompiler     : "com.google.dagger:dagger-compiler:$dagger",
+            hiltAndroidCompiler: "com.google.dagger:hilt-android-compiler:$daggerHiltAndroid",
+            hiltPlugin         : "com.google.dagger:hilt-android-gradle-plugin:$daggerHiltAndroid",
+            hiltCommon         : "androidx.hilt:hilt-common:$daggerHiltVersion",
+            lifecycle          : "androidx.hilt:hilt-lifecycle-viewmodel:$daggerHiltVersion"
+    ]
+
+    junit = '4.13.2'
+    junitExt = "1.1.2"
+    espresso = "3.3.0"
+    coreTesting = "2.1.0"
+    kotlinxCoroutines = '1.5.0-native-mt'
+    robolectric = "4.3"
+    robolectricShadow = "3.3.2"
+    mockkVersion = "1.11.0"
+    coreKtxTestVersion = "1.3.0"
+    karumiShotVersion = "5.10.4"
+
+    TestLibraries = [
+            junit              : "junit:junit:$junit",
+            junitExt           : "androidx.test.ext:junit:$junitExt",
+            espressoCore       : "androidx.test.espresso:espresso-core:$espresso",
+            espressoContrib    : "androidx.test.espresso:espresso-contrib:$espresso",
+            coreKtxTesting     : "androidx.test:core-ktx:$coreKtxTestVersion",
+            coreTesting        : "androidx.arch.core:core-testing:$coreTesting",
+            kotlinxCoroutines  : "org.jetbrains.kotlinx:kotlinx-coroutines-test:$kotlinxCoroutines",
+            robolectric        : "org.robolectric:robolectric:$robolectric",
+            robolectricPlay    : "org.robolectric:shadows-play-services:$robolectricShadow",
+            robolectricSupport : "org.robolectric:shadows-support-v4:$robolectricShadow",
+            karumiShot         : "com.karumi:shot:$karumiShotVersion",
+            hiltAndroidTesting : "com.google.dagger:hilt-android-testing:$daggerHiltAndroid",
+            hiltAndroidCompiler: "com.google.dagger:hilt-android-compiler:$daggerHiltAndroid",
+            hiltCompiler       : "androidx.hilt:hilt-compiler:$daggerHiltAndroid",
+            mockk              : "io.mockk:mockk:$mockkVersion",
+    ]
+}

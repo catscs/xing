@@ -1,0 +1,109 @@
+buildscript {
+    apply from: '../dependencies.gradle'
+}
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
+    id 'dagger.hilt.android.plugin'
+    id 'shot'
+}
+
+android {
+    compileSdkVersion rootProject.ext.compileVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+
+    defaultConfig {
+        applicationId "es.webandroid.xing"
+        minSdkVersion rootProject.ext.minVersion
+        targetSdkVersion rootProject.ext.targetVersion
+        versionCode rootProject.ext.versionCode
+        versionName rootProject.ext.versionName
+        testInstrumentationRunner "es.webandroid.xing.HiltTestRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_1_8
+    }
+
+    testOptions {
+        unitTests {
+            includeAndroidResources = true
+        }
+    }
+
+    buildFeatures {
+        viewBinding true
+    }
+    packagingOptions {
+        exclude 'META-INF/AL2.0'
+        exclude 'META-INF/LGPL2.1'
+    }
+}
+
+dependencies {
+
+    implementation Libraries.kotlinStLib
+    implementation Libraries.coreKtx
+    implementation Libraries.playServicesMap
+    implementation Libraries.appcompat
+    implementation Libraries.recyclerview
+    implementation Libraries.material
+    implementation Libraries.coordinatorlayout
+    implementation Libraries.constraintlayout
+    implementation Libraries.lifecycleExtensions
+    implementation Libraries.viewmodelKtx
+    implementation Libraries.livedataKtx
+    implementation Libraries.runtimeKtx
+    implementation Libraries.navigationFragment
+
+    // DI
+    implementation DaggerHiltLibraries.hiltAndroid
+    kapt DaggerHiltLibraries.hiltAndroidCompiler
+    implementation DaggerHiltLibraries.hiltAndroid
+    implementation DaggerHiltLibraries.lifecycle
+    kapt DaggerHiltLibraries.hiltCommon
+    kapt DaggerHiltLibraries.hiltCompiler
+
+    // DB
+    implementation Libraries.roomRuntime
+    kapt Libraries.roomCompiler
+
+    // Image
+    implementation Libraries.picasso
+
+    // Networking
+    implementation Libraries.retrofit
+    implementation Libraries.retrofitMoshi
+    implementation Libraries.moshi
+    kapt Libraries.moshiKotlin
+    implementation Libraries.okhttp
+
+    // Testing
+    testImplementation TestLibraries.junit
+    androidTestImplementation TestLibraries.junitExt
+    testImplementation TestLibraries.espressoCore
+    androidTestImplementation TestLibraries.espressoCore
+    androidTestImplementation TestLibraries.espressoContrib
+    androidTestImplementation TestLibraries.coreKtxTesting
+    testImplementation TestLibraries.mockk
+    testImplementation TestLibraries.coreTesting
+    testImplementation TestLibraries.kotlinxCoroutines
+
+    testImplementation TestLibraries.hiltAndroidTesting
+    kaptTest TestLibraries.hiltAndroidCompiler
+    androidTestImplementation TestLibraries.hiltAndroidTesting
+    kaptAndroidTest TestLibraries.hiltAndroidCompiler
+}
